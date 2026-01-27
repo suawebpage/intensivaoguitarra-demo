@@ -1,0 +1,214 @@
+/* assets/css/init-reset.css */
+
+/* ==================== */
+/* RESET BÁSICO         */
+/* ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ==================== */
+/* VARIÁVEIS CSS        */
+/* ==================== */
+:root {
+    /* Fonte */
+    --font-family: 'Arial, sans-serif';
+    
+    /* Cores */
+    --white: #e4e4e4;
+    --gradient-red: linear-gradient(90deg, #6a0000, #8d0000, #6a0000);
+    --dark-bg: #0d0d0d;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    
+    /* Espaçamentos */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    
+    /* Bordas */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-round: 50px;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.5);
+    
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ==================== */
+/* HTML & BODY          */
+/* ==================== */
+html {
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background: #000;
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==================== */
+/* TIPOGRAFIA           */
+/* ==================== */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ==================== */
+/* LISTAS               */
+/* ==================== */
+ul, ol {
+    list-style: none;
+}
+
+/* ==================== */
+/* IMAGENS              */
+/* ==================== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==================== */
+/* BOTÕES               */
+/* ==================== */
+button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* ==================== */
+/* FORMULÁRIOS          */
+/* ==================== */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* ==================== */
+/* TABELAS              */
+/* ==================== */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ==================== */
+/* SELEÇÃO DE TEXTO     */
+/* ==================== */
+::selection {
+    background: #8d0000;
+    color: var(--white);
+}
+
+::-moz-selection {
+    background: #8d0000;
+    color: var(--white);
+}
+
+/* ==================== */
+/* SCROLLBAR (Webkit)   */
+/* ==================== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8d0000;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a00000;
+}
+
+/* ==================== */
+/* FOCUS VISIBLE        */
+/* ==================== */
+:focus-visible {
+    outline: 2px solid #8d0000;
+    outline-offset: 2px;
+}
+
+/* ==================== */
+/* ACESSIBILIDADE       */
+/* ==================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ==================== */
+/* UTILITIES            */
+/* ==================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

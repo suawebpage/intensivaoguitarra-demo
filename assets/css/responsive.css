@@ -1,0 +1,322 @@
+/* assets/css/responsive.css */
+
+/* ==================== */
+/* LANDSCAPE MODE       */
+/* ==================== */
+@media screen and (orientation: landscape) and (min-width: 768px) {
+    #hero {
+        background-image: url(../img/electric-guitar-and-ampli-desk-GRANDE.jpg);
+    }
+}
+
+/* ==================== */
+/* MOBILE PEQUENO       */
+/* ==================== */
+@media (max-width: 480px) {
+    #countdown {
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+
+    #countdown span {
+        font-size: 14px;
+        min-width: 26px;
+        padding: 3px 5px;
+    }
+
+    #countdown p {
+        font-size: 11px;
+        margin-top: 5px;
+    }
+
+    #hero {
+        padding: 80px 3%;
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .btn-hero {
+        padding: 14px 30px;
+        font-size: 1em;
+    }
+
+    #data-section,
+    #audience-section,
+    #schedule-section,
+    #benefits-section,
+    #testimonials-section,
+    #guarantee-section,
+    #faq-section,
+    #cta-section {
+        padding: 60px 15px;
+    }
+
+    #img-frame {
+        height: 350px;
+    }
+
+    .benefits-image {
+        height: 350px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .badge-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .badge-circle span {
+        font-size: 1.6em;
+    }
+
+    .badge-circle small {
+        font-size: 0.9em;
+    }
+}
+
+/* ==================== */
+/* TABLET               */
+/* ==================== */
+@media (min-width: 481px) and (max-width: 768px) {
+    #countdown p {
+        font-size: 13px;
+    }
+
+    #hero {
+        padding: 80px 4%;
+    }
+
+    .benefits-container {
+        gap: 40px;
+    }
+
+    .schedule-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+/* ==================== */
+/* DESKTOP PEQUENO      */
+/* ==================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #data-section {
+        padding: 100px 30px;
+    }
+
+    .benefits-container {
+        gap: 50px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================== */
+/* DESKTOP GRANDE       */
+/* ==================== */
+@media (min-width: 1025px) {
+    .data-wrapper,
+    .benefits-content {
+        text-align: left;
+    }
+
+    .data-wrapper .features {
+        padding-left: 20px;
+    }
+
+    #hero {
+        justify-content: flex-start;
+        padding-left: 8%;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .benefits-image {
+        margin: 0 auto;
+    }
+
+    .footer-content {
+        text-align: left;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+/* ==================== */
+/* AJUSTES DE ALTURA    */
+/* ==================== */
+@media (max-height: 600px) and (orientation: landscape) {
+    #hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 5% 80px;
+    }
+
+    #hero h1 {
+        font-size: 3em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+}
+
+/* ==================== */
+/* IMPRESSÃO            */
+/* ==================== */
+@media print {
+    #countdown {
+        display: none;
+    }
+
+    #hero {
+        height: auto;
+        background: #111;
+        padding: 40px 20px;
+    }
+
+    .btn-hero,
+    .btn {
+        border: 2px solid #000;
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    .curve-bg {
+        display: none;
+    }
+}
+
+/* ==================== */
+/* ACESSIBILIDADE       */
+/* ==================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ==================== */
+/* DARK MODE SUPPORT    */
+/* ==================== */
+@media (prefers-color-scheme: dark) {
+    /* Já está em dark mode por padrão */
+}
+
+/* ==================== */
+/* HIGH CONTRAST        */
+/* ==================== */
+@media (prefers-contrast: high) {
+    .btn,
+    .audience-card,
+    .schedule-card,
+    .testimonial-card,
+    .faq-item {
+        border: 2px solid var(--white);
+    }
+
+    .benefit-icon {
+        border: 2px solid var(--white);
+    }
+}
+
+/* ==================== */
+/* LANDSCAPE TABLETS    */
+/* ==================== */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #hero {
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==================== */
+/* ULTRA WIDE SCREENS   */
+/* ==================== */
+@media (min-width: 1920px) {
+    .data-wrapper,
+    .audience-wrapper,
+    .schedule-container,
+    .benefits-container,
+    .testimonials-grid,
+    .guarantee-container,
+    .faq-container,
+    .cta-container,
+    .footer-content {
+        max-width: 1400px;
+    }
+
+    #hero h1 {
+        font-size: 6em;
+    }
+
+    #hero p {
+        font-size: 2em;
+    }
+
+    .btn-hero {
+        font-size: 1.5em;
+        padding: 22px 50px;
+    }
+}
+
+/* ==================== */
+/* TOUCH DEVICES        */
+/* ==================== */
+@media (hover: none) and (pointer: coarse) {
+    .btn-hero,
+    .btn {
+        padding: 18px 35px;
+        font-size: 1.1em;
+    }
+
+    .audience-card,
+    .schedule-card,
+    .testimonial-card,
+    .faq-item {
+        transition: none;
+    }
+
+    /* Remove hover effects on touch devices */
+    .audience-card:hover,
+    .schedule-card:hover,
+    .testimonial-card:hover,
+    .faq-item:hover {
+        transform: none;
+    }
+}
